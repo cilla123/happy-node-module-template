@@ -1,0 +1,36 @@
+{
+  "name": "happy-node-module-template",
+  "version": "0.0.1",
+  "description": "happy-node npm 包基础模板",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "babel src -d dist --copy-files",
+    "build:watch": "npm run build -- --watch",
+    "test": "nyc ava --verbose --no-cache",
+    "test:watch": "nyc ava --verbose --watch --no-cache",
+    "report": "nyc report --reporter=html"
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cilla123/happy-node-module-template.git"
+  },
+  "keywords": [],
+  "author": "Ben赖珏豪",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cilla123/happy-node-module-template/issues"
+  },
+  "homepage": "https://github.com/cilla123/happy-node-module-template/blob/master/README.md",
+  "devDependencies": {
+    "ava": "0.23.0",
+    "babel-cli": "6.24.1",
+    "babel-preset-env": "1.6.0",
+    "nyc": "^11.3.0"
+  }
+}
